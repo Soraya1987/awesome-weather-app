@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Whether App</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Indie+Flower&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container border">
+        <form>
+            <div class="row">
+                <div class="card col bg_color border_none">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1 id="cityName">
+                                <strong></strong>
+                            </h1>
+                            <br />
+                            <p class="Today_wheather" id="nowDate">
+                                Sunday 11:00 Am<br />
+                                2022-02-06
+                            </p>
+                            <p id="description"></p>
+                            <label for="" class="days-lable round mt-4 mb-4 p-2" id="99">
+                                <span id="degree">0</span>
+                                <span id="FC">
+                                    °C
+                                </span>
+                            </label>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+
+                            </div>
+                            <br />
+                            <div class="row" id="humwind">
+                                <p>
+                                    Humidity: <span id="humidity"></span>%
+                                </p>
+                                <p>
+                                    Wind: <span id="wind"></span> km/h
+                                </p>
+
+                            </div>
+
+                        </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="card col bg_color border_none">
+                    <div class="row">
+                        <div class="col Enter_city">
+                            <input type="text" placeholder="Enter your city" autocomplete="off" class="border round inp"
+                                id="cityInp" />
+                        </div>
+                        <div class="col Whether">
+                            <button type="submit" class="btn btn-primary round">
+                                Whether
+                            </button>
+                        </div>
+                        <div class="col btn-current ">
+                            <button type="button" class="btn btn-success round"
+                                id="current-location-buttom">Current</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card col border_none">
+                    <img src="img/allWeather.jpg" class="rounded" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col m-1 p-0 border">
+                    <label for="" class="days-lable round mb-1 mt-0 p-1">Sunday</label>
+
+                    <img src="img/haif_sunny_Day.jpg" class="rounded" mr-0 />
+                    <label for="" class="days-lable round mt-4 mb-4 ml-0 p-1">0°&nbsp&nbsp&nbsp&nbsp -7°</label>
+                </div>
+                <div class="card col m-1 p-0 border">
+                    <label for="" class="days-lable round mb-1 mt-0 p-1">Monday</label>
+
+                    <img src="img/haif_sunny_Day.jpg" class="rounded" mr-0 />
+                    <label for="" class="days-lable round mt-4 mb-4 ml-0 p-1">2° &nbsp&nbsp&nbsp&nbsp-7°</label>
+                </div>
+                <div class="card col m-1 p-0 border">
+                    <label for="" class="days-lable round mb-1 mt-0 p-1">Tuesday</label>
+
+                    <img src="img/haif_sunny_Day.jpg" class="rounded" mr-0 />
+                    <label for="" class="days-lable round mt-4 mb-4 ml-0 p-1">2°&nbsp&nbsp&nbsp&nbsp -5°</label>
+                </div>
+                <div class="card col m-1 p-0 border">
+                    <label for="" class="days-lable round mb-1 mt-0 p-1">Wednesday</label>
+
+                    <img src="img/haif_sunny_Day.jpg" class="rounded" mr-0 />
+                    <label for="" class="days-lable round mt-4 mb-4 ml-0 p-1">6°&nbsp&nbsp&nbsp&nbsp -2°</label>
+                </div>
+                <div class="card col m-1 p-0 border">
+                    <label for="" class="days-lable round mb-1 mt-0 p-1">Thursday</label>
+
+                    <img src="img/rainy_Day.jpg" class="rounded" mr-0 />
+                    <label for="" class="days-lable round mt-4 mb-4 ml-0 p-1">6°&nbsp&nbsp&nbsp&nbsp -3°</label>
+                </div>
+                <div class="card col m-1 p-0 border">
+                    <label for="" class="days-lable round mb-1 mt-0 p-1">Friday</label>
+
+                    <img src="img/Snowy-Day.jpg" class="rounded" mr-0 />
+                    <label for="" class="days-lable round mt-4 mb-4 ml-0 p-1">3°&nbsp&nbsp&nbsp&nbsp -6°</label>
+                </div>
+                <div class="card col m-1 p-0 border">
+                    <label for="" class="days-lable round mb-1 mt-0 p-1">Saturday</label>
+
+                    <img src="img/sunny_Day.jpg" class="rounded" mr-0 />
+                    <label for="" class="days-lable round mt-4 mb-4 ml-0 p-1">3°&nbsp&nbsp&nbsp&nbsp -6°</label>
+                </div>
+                <div class="card col m-1 p-0 border">
+                    <label for="" class="days-lable round mb-1 mt-0 p-1">Sunday</label>
+
+                    <img src="img/haif_sunny_Day.jpg" class="rounded" mr-0 />
+                    <label for="" class="days-lable round mt-4 mb-4 ml-0 p-1">4°&nbsp&nbsp&nbsp&nbsp -4°</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+
+</html>

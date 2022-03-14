@@ -21,6 +21,10 @@ li {
   line-height: 1;
   list-style: none;
 }
+#codedBy {
+  font-size: 14px;
+  font-weight: 500;
+}
 .btn {
   background-color: #c4ddf2;
   color: black;
@@ -91,4 +95,10 @@ li {
   float: left;
   font-size: 16px;
   line-height: 1.5;
+}
+
+#github {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
 }
